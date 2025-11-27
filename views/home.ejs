@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Home | Image Saver</title>
+        <link rel="stylesheet" href="/styles.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div class="container">
+            <header class="topbar">
+                <h1 class="app-title">Random Dog Image Saver</h1>
+                <div class="topbar-right">
+                    <span class="user-label">
+                        Logged in as <strong><%= currentUser && currentUser.username %></strong>
+                    </span>
+                    
+                    <form action="/logout" method="POST" class="inline-form">
+                        <button type="submit" class="btn small">Logout</button>
+                    </form>
+                </div>
+            </header>
+
+            <% if (typeof error !== "undefined" && error) { %>
+                <p class="error"><%= error %></p>
+            <% } %>
+            
+            <section class="controls">
+                <!-- Get random image -->
+                <a href="/random" class="btn">Get Random Image</a>
+                <!-- Save current image (only if one exists) -->
+      
+                <% if (currentImage) { %>
+                    <form action="/save" method="POST" class="inline-form">
+                    <input type="hidden" name="imageUrl" value="<%= currentImage %>" />
+                    <button type="submit" class="btn">Save This Image</button>
+                    </form>
+                <% } %>
+                
+                <!-- View saved images -->
+                <a href="/saved" class="btn secondary">View Saved Images</a>
+            </section>
+            
+            <section class="image-area">
+                <% if (currentImage) { %>
+                    <img src="<%= currentImage %>" alt="Random dog image" class="main-image" />
+                <% } else { %>
+                    <p class="placeholder-text">
+                        No image yet. Click <strong>Get Random Image</strong> to load one.
+                    </p>
+                <% } %>
+            </section>
+        </div>
+    </body>
+</html>

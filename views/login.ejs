@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login | Image Saver</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css" />
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="app-title">Random Dog Image Saver</h1>
+            <% if (error) { %>
+                <p class="error"><%= error %></p>
+            <% } %>
+            <div class="card">
+                <form action="/login" method="POST" class="form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter a username" required/>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef2ff;
+    color: #1f2933;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* App title */
+.app-title {
+    margin: 0;
+}
+
+/* Top bar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-label {
+    margin-right: 8px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px 4px 4px 0;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 14px;
+}
+
+.btn.secondary {
+    background-color: #64748b;
+}
+
+.btn.small {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* Inline form so buttons sit next to each other */
+.inline-form {
+    display: inline-block;
+}
+
+/* Forms / cards */
+.card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.15);
+    margin-bottom: 16px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #cbd2e1;
+}
+
+/* Error message */
+.error {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+}
+
+/* Controls area (buttons on home) */
+.controls {
+    margin-bottom: 20px;
+}
+
+/* Main image display */
+.image-area {
+    min-height: 220px;
+}
+
+.main-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(15, 23, 42, 0.2);
+}
+
+/* Saved images grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.saved-image {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.saved-time {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+/* Placeholder text */
+.placeholder-text {
+    color: #4b5563;
+    font-style: italic;
+}
