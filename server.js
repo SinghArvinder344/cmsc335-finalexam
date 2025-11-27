@@ -8,13 +8,8 @@ const session = require("express-session");
 
 require("dotenv").config();
 
-// ----- ARGUMENTS / PORT -----
-const argv = process.argv.slice(2);
-if (argv.length !== 1) {
-    console.log("Usage: node server.js PORT_NUMBER_HERE");
-    process.exit(1);
-}
-const portNumber = Number(argv[0]);
+// ----- PORT -----
+const portNumber = process.env.PORT || 3000;
 
 // ----- MONGO CONNECTION STRING -----
 const uri = process.env.MONGO_CONNECTION_STRING;
